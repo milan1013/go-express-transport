@@ -1,0 +1,205 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+#main {
+  /*background-color: green;*/
+  display: flex;
+  flex: 1;
+  width: 100vw;
+  flex-direction: column;
+  justify-content: start;
+}
+#header {
+  position: relative;
+}
+#trailers {
+  background-image: url("../photos/trailers.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 40vh;
+  background-color: yellow;
+}
+.blur {
+  background: rgba(74, 74, 74, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.logo-container {
+  height: 15vh;
+  width: 15vw;
+  position: absolute;
+  border-radius: 20px 20px 0px 0px;
+  bottom: 0;
+  left: 50%;
+  padding: 20px 30px;
+  transform: translate(-50%);
+  z-index: 20;
+  background-image: url("../photos/logo.png");
+  background-size: contain;
+
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media only screen and (min-width: 1300px) {
+  #trailers {
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+  }
+  #trailers-desktop {
+    background-image: url("../photos/trailers.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-width: 50vw;
+    max-width: 1300px;
+    height: 40vh;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 20;
+  }
+}
+
+#main-container {
+  display: flex;
+  flex: 1;
+  width: 80%;
+  align-self: center;
+  justify-content: center;
+}
+#photo-container {
+  /*background-color: aquamarine;*/
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+#photo {
+  background-image: url("../photos/team.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 80%;
+  width: 80%;
+  max-height: 580px;
+  border-radius: 20px;
+}
+#about-us {
+  /*background-color: teal;*/
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 32px 0px;
+}
+#about-us-text {
+  width: 60%;
+  font-size: 1.3em;
+}
+
+.desktop {
+  visibility: visible;
+}
+.about-us-title {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100%;
+}
+h3 {
+  margin: 0;
+  letter-spacing: 0.3em;
+  font-weight: 300;
+  font-size: 2em;
+}
+#social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 21px;
+}
+#social-media > div > a,
+#social-media > a {
+  color: #000;
+  text-decoration: none;
+  margin: 0 21px;
+  transition: 0.7s ease all;
+}
+/*mobile*/
+@media only screen and (max-width: 800px) {
+  .logo-container {
+    height: 15vw;
+    width: 15vh;
+  }
+  #about-us-text {
+    width: 100% !important;
+    font-size: 1em;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  #about-us-text {
+    width: 70%;
+    font-size: 1.1em;
+  }
+  #main-container {
+    flex-direction: column;
+    width: 100%;
+  }
+  #photo {
+    height: 30vh;
+    width: 100%;
+    border-radius: 0px;
+  }
+  .mobile {
+    visibility: visible;
+    display: flex;
+    opacity: 0.5;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    color: #fff;
+  }
+  .desktop {
+    display: none;
+  }
+  #photo {
+    position: relative;
+  }
+  #spec {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 10;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  #about-us-text {
+    margin-top: 0;
+  }
+  #about-us {
+    margin-bottom: 0;
+    margin-left: 21px;
+    margin-right: 21px;
+    margin-top: 12px;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  .mobile {
+    display: none !important;
+  }
+  #spec {
+    display: none;
+  }
+}
